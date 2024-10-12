@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- funções de cada questão -->
+    <script src="questions/q01.js"></script>
+    <script src="questions/q02.js"></script>
+    <script src="questions/q03.js"></script>
+    <script src="questions/q04.js"></script>
+    <script src="questions/q05.js"></script>
+
+</head>
+
+<body>
+
+    <main class="col-6 offset-3 mt-4">
+
+        <h1>Questões do Processo Seletivo</h1>
+
+        <ol>
+
+            <!-- questão 01 -->
+            <li> Observe o trecho de código abaixo: int INDICE = 13, SOMA = 0, K = 0;
+                Enquanto K < INDICE faça { K = K + 1; SOMA = SOMA + K; }
+                Imprimir(SOMA);
+                Ao final do processamento, qual será o valor da variável SOMA
+            </li>
+
+            <span> Resultado:
+                <script>
+                    document.write(q01());
+                </script>
+            </span>
+
+            <!-- questão 02 -->
+            <li>
+                Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
+            </li>
+
+            <form>
+                <input type="num" name="num_fibonacci" id="num_fibonacci">
+                <button type="button" onclick="q02()">Calcular</button>
+            </form>
+            
+            <span id="result_num_fibonacci">...</span>
+
+            <!-- questão 03 -->
+            <li>
+                Dado um vetor que guarda o valor de faturamento diário de uma distribuidora, faça um programa, na linguagem que desejar, que calcule e retorne:
+                <ul>
+                    <li>O menor valor de faturamento ocorrido em um dia do mês;</li>
+                    <li>O maior valor de faturamento ocorrido em um dia do mês;</li>
+                    <li>Número de dias no mês em que o valor de faturamento diário foi superior à média mensal.</li>
+                </ul>
+            </li>
+
+            <!-- questão 04 -->
+            <li>
+                Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:
+                <ul>
+                    <li>SP – R$67.836,43</li>
+                    <li>RJ – R$36.678,66</li>
+                    <li>MG – R$29.229,88</li>
+                    <li>ES – R$27.165,48</li>
+                    <li>Outros – R$19.849,53</li>
+                </ul>
+
+                Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora. 
+            </li>
+
+            <ul>
+                <li id="sp_percentual"></li>
+                <li id="rj_percentual"></li>
+                <li id="mg_percentual"></li>
+                <li id="es_percentual"></li>
+                <li id="outros_percentual"></li>
+            </ul>
+            <script>q04()</script>
+
+            <!-- questão 05 -->
+            <li>
+                Escreva um programa que inverta os caracteres de um string.
+            </li>
+
+            <form>
+                <input type="text" name="texto" id="texto">
+                <button type="button" onclick="q05()">Calcular</button>
+            </form>
+
+            <span id="texto_invertido">...</span>
+
+        </ol>
+
+    </main>
+    
+</body>
+
+</html>

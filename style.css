@@ -1,0 +1,7 @@
+main ol li {
+    padding: 20px 0;
+}
+
+main ul li {
+    padding: 0 !important;
+}
